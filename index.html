@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application de Recettes</title>
+    <!-- Ajout du lien CDN de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5 mb-5">
+    <div id="recipeApp">
+        <!-- Section Recettes -->
+        <div id="recipeList" class="mb-5">
+            <h2 class="mb-3">Nos Recettes</h2>
+            <input type="text" id="newRecipeNameInput" class="form-control mb-2" placeholder="Nom de la recette">
+            <div id="ingredientsCheckbox" class="mb-2">
+                <label class="mr-2"><input type="checkbox" value="salade"> Salade</label>
+                <label class="mr-2"><input type="checkbox" value="tomate"> Tomate</label>
+                <label class="mr-2"><input type="checkbox" value="oignon"> Oignon</label>
+                <label class="mr-2"><input type="checkbox" value="poulet"> Poulet</label>
+                <label class="mr-2"><input type="checkbox" value="steak"> Steak</label>
+                <label class="mr-2"><input type="checkbox" value="fromage"> Fromage</label>
+            </div>
+            <button onclick="addRecipe()" class="btn btn-primary">Ajouter la recette</button>
+            <ul id="recipeUl" class="list-group mt-3"></ul>
+        </div>
+
+        <!-- Section Commandes -->
+        <div id="commandList" class="mb-5">
+            <h2 class="mb-3">Lancer une commande en cuisine</h2>
+            <label for="recipeSelect">Choisir une recette:</label>
+            <select id="recipeSelect" class="form-control mb-2"></select>
+
+            <label for="sauceSelect">Choisir une sauce:</label>
+            <select id="sauceSelect" class="form-control mb-2">
+                <option value="andalouse">Andalouse</option>
+                <option value="algérienne">Algérienne</option>
+                <option value="mayonnaise">Mayonnaise</option>
+                <option value="ketchup">Ketchup</option>
+                <option value="blanche">Blanche</option>
+                <option value="samouraï">Samouraï</option>
+            </select>
+
+            <button onclick="launchCommand()" class="btn btn-success">Envoyer en cuisine</button>
+        </div>
+
+        <!-- Section Cuisine - Liste des commandes en cours -->
+        <div id="kitchenList" class="mb-5">
+            <h2 class="mb-3">Les commandes en cuisine</h2>
+            <ul id="commandUl" class="list-group"></ul>
+        </div>
+
+        <!-- Section Validées - Liste des commandes validées -->
+        <div id="validatedList">
+            <h2 class="mb-3">Commandes Validées</h2>
+            <ul id="validatedUl" class="list-group"></ul>
+        </div>
+    </div>
+</div>
+
+<!-- Inclusion du fichier JavaScript -->
+<script src="index.js"></script>
+</body>
+</html>
