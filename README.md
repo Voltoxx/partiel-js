@@ -27,7 +27,7 @@ Bienvenue dans l'application de recettes ! Cette application permet de gérer de
 1. Clonez ce dépôt sur votre machine locale.
    ```bash
    git clone https://github.com/Voltoxx/partiel-js.git
-
+    ```
 2. Ouvrez le fichier index.html dans votre navigateur web.
 
 3. Commencez à utiliser l'application de recettes.
